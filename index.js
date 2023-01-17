@@ -7,8 +7,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename)
 
 
-
-
 import connectDB from "./sourceFiles/connectdb.js";
 import RegisterFile from "./sourceFiles/register.js";
 import LoginFile from "./sourceFiles/login.js";

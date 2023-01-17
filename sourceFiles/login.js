@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 
 app.post("/", function(req, res){
     var data = req.body;
-    // console.log(data);
+    console.log(data);
 
     Students.findOne({email : data.userEmail}, function(err, result){
         if(err){
@@ -44,7 +44,7 @@ app.post("/", function(req, res){
                 }
                 else{
                     if(result.password == data.password){
-                        res.send("Login Successful");
+                        res.send({status : "success", result});
                     }
                     else{
                         res.send("invalid login")

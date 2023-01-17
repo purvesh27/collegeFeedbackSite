@@ -47,7 +47,7 @@ app.post("/", function(req,res){
                     teacher : data.subjectTeacherName,
                     Branch : subject_branch,
                     Section : subject_section,
-                    Semester : subject_semester
+                    Semester : 6
                 })
 
                 subject.save();
@@ -67,9 +67,6 @@ app.post("/", function(req,res){
             }
         }
     })
-
-
-
 
 })
 

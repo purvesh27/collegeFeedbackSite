@@ -25,20 +25,20 @@ function Login() {
   const sendLoginData = async () => {
     var object = { userEmail, password, authCode };
 
-    // console.log(object)
+    console.log(object)
 
     var reply = await axios.post("/login", object);
 
-    // console.log(reply.data);
+    console.log(reply.data);
 
-    if (reply.data.code == "Login Successful") {
+    if (reply.data.status == "success") {
       // console.log("asdkjfdh");
       alert("Login Successfull");
       dispatch(LogInAction());
-      dispatch(SetEmailAction(reply.data.email));
-      dispatch(SetNameAction(reply.data.name));
-      dispatch(SetSectionAction(reply.data.section));
-      dispatch(SetSemesterAction(reply.data.semester));
+      dispatch(SetEmailAction(userEmail));
+      dispatch(SetNameAction(reply.data.result.name));
+      dispatch(SetSectionAction(reply.data.result.section));
+      dispatch(SetSemesterAction(reply.data.result.semester));
 
       navigate("/dashboard");
     }
@@ -107,22 +107,7 @@ function Login() {
             Cancel
           </button>
           <br />
-          <GoogleLogin
-            clientId="396893215612-v514renemo3tgeb85egqv0ltej6o7uip.apps.googleusercontent.com"
-            buttonText="Login"
-            onSuccess={responseSuccessGoogle}
-            onFailure={responseFailGoogle}
-            cookiePolicy={"single_host_origin"}
-            render={(renderProps) => (
-              <button
-                class="form_button_blue"
-                onClick={renderProps.onClick}
-                style={{ backgroundColor: "blue" }}
-              >
-                Login With Google
-              </button>
-            )}
-          />
+    
           <br />
           <span>
             Don't have an account.<Link to="/register">Register Here</Link>

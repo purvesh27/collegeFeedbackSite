@@ -9,14 +9,16 @@ app.use(bodyParser.json());
 
 
 app.post("/", (req,res)=>{
+    console.log("we here ")
     var data = req.body;
     console.log(data);
-    Subjects.find({Branch : data.branch, Section : data.Section, Semester : data.semester},
-        (err, result)=>{
+    Subjects.find({},
+        (err, result)=>{    
             if(err){
                 throw err;
             }
             else{
+                console.log(result);
                 console.log(result);
                 res.send(result);
             }

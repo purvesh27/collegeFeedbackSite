@@ -16,15 +16,15 @@ const studentScheema = new mongoose.Schema({
     },
     semester: {
         type: Number,
-        required: true
+        required: false
     },
     section: {
         type: String,
-        required: true
+        required: false
     },
     branch: {
         type: String,
-        required: true
+        required: false
     },
     googleId: {
         type : String,

@@ -146,22 +146,7 @@ function Register() {
             Cancel
           </button>
           <br />
-          <GoogleLogin
-            clientId="396893215612-v514renemo3tgeb85egqv0ltej6o7uip.apps.googleusercontent.com"
-            buttonText="Login"
-            onSuccess={responseSuccessGoogle}
-            onFailure={responseFailGoogle}
-            cookiePolicy={"single_host_origin"}
-            render={(renderProps) => (
-              <button
-                class="form_button_blue"
-                onClick={renderProps.onClick}
-                style={{ backgroundColor: "blue" }}
-              >
-                Resigter With Google
-              </button>
-            )}
-          />
+    
           <br />
           <span>
             Already have an account.<Link to="/login">Login Here</Link>

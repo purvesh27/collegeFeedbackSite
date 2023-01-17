@@ -57,6 +57,7 @@ function Feedbackconfirmation() {
     var response = await axios.post("/getsubjects", data);
     // console.log(response);
     setSubjects(response.data);
+    console.log(response.data);
   };
 
   var allSubjects = subject.map((single) => single.name);
@@ -75,6 +76,8 @@ function Feedbackconfirmation() {
           allTeachers={allTeachers}
         />
       ))}
+
+      {/* ldfjlkadj */}
     </div>
   );
 }

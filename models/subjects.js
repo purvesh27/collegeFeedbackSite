@@ -11,15 +11,15 @@ const subjectScheema = mongoose.Schema({
 
     Branch : {
         type : String,
-        required : true
+        required : false
     },
     Section : {
         type : String,
-        required : true
+        required : false
     },
     Semester : {
         type : Number,
-        required : true
+        required : false
     },
 
     teacher : {
