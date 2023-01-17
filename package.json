@@ -12,16 +12,8 @@
     "start": "nodemon index.js",
     "heroku-postbuild": "cd frontend && NPM_CONFIG_PRODUCTION=false npm install && npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/betusingh890/CollegeFeedbackSystem.git"
-  },
-  "author": "Prasoon Rajpoot",
+  "author": "Purvesh Sanjeev Doud",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/betusingh890/CollegeFeedbackSystem/issues"
-  },
-  "homepage": "https://github.com/betusingh890/CollegeFeedbackSystem#readme",
   "dependencies": {
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
